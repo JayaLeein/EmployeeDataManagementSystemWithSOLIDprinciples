@@ -12,10 +12,13 @@ import com.algonquin.cst8288.assignment1.persistence.JSONFormatter;
 
 /**
  * 
+ * The controller class responsible for processing employee data.
  * Process, validate and save employee data.
- * 
+ * @author JingYi Li
  * 
  */
+
+//create new classes
 
 public class EmployeeController {
 
@@ -36,7 +39,7 @@ public class EmployeeController {
 		
 		
 		// Store data
-		this.saveEmployee(employee, "employee_data.txt");
+		this.saveEmployee(employee, "employee_data.txt"); //have to change something here
 		return "SUCCESS";
 	}
 
@@ -147,8 +150,8 @@ public class EmployeeController {
 	 * 
 	 * 
 	 */
-	private void saveEmployee(Employee person, String filename) throws IOException {
-		Formatter formatter = new JSONFormatter();
+	private void saveEmployee(Employee person, String filename, Formatter formatter) throws IOException { //add Formatter formatter
+//		Formatter formatter = new Formatter();  //changed JSONFormatter()
 		try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
 			writer.println(formatter.format(person));
 			writer.flush();

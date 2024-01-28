@@ -3,7 +3,9 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 import java.util.Date;
 
 public class Employee {
-
+    
+        //can you extend employee class? you can play with it or leave it there
+        
 	private String name;
 	private String email;
 	private String address;
