@@ -1,6 +1,10 @@
 package com.algonquin.cst8288.assignment1.controller;
 
 
+import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
+import com.algonquin.cst8288.assignment1.emoloyee.PermanentEmployeeImpl;
+import com.algonquin.cst8288.assignment1.persistence.JSONFormatter;
+import com.algonquin.cst8288.assignment1.persistence.TextFormatter;
 import java.io.IOException;
 
 /**
@@ -12,15 +16,42 @@ import java.io.IOException;
 public class Main {
 	
 	
-	public static void main(String[] args) throws IOException {
-		
+    public static void main(String[] args) throws IOException {
+        // Instantiate two Employee objects
+        PermanentEmployeeImpl permanentEmployee = new PermanentEmployeeImpl();
+        permanentEmployee.setName("John Doe");
+        permanentEmployee.setEmail("john.doe@example.com");
+        permanentEmployee.setAddress("123 Main St");
+        permanentEmployee.setSalary(60000.0);
+        permanentEmployee.setNumberOfServiceYear(5);
 
-		// Instantiate two Employee objects and use PermanentEmployeeService.java 
-		// and ContractEmployeeService.java to calculate and populate required data for objects
-		// Utilize EmployeeController.java to save both objects in JSON and Text formats, 
-		// saving the data in files named json_employee_data.txt and text_employee_data.txt.
-		// Do the same thing to output the data to the console instead of saving it to a file.
-		
-	}	
+        ContractEmployeeImpl contractEmployee = new ContractEmployeeImpl();
+        contractEmployee.setName("Jane Smith");
+        contractEmployee.setEmail("jane.smith@example.com");
+        contractEmployee.setAddress("456 Oak St");
+        contractEmployee.setSalary(50000.0);
+        contractEmployee.setNumberOfServiceYear(3);
+
+        // Use EmployeeController to save both objects in JSON and Text formats
+        EmployeeController employeeController = new EmployeeController(new EmployeeValidator(), new EmployeeSaver());
+
+        // Save data to files
+        employeeController.processEmployee(permanentEmployee);
+        employeeController.processEmployee(contractEmployee);
+
+        // Output data to the Console
+        System.out.println("Permanent Employee Data (JSON Format):");
+        System.out.println(employeeController.processEmployee(permanentEmployee));
+
+        System.out.println("\nContract Employee Data (Text Format):");
+        System.out.println(employeeController.processEmployee(contractEmployee));
+
+        // Alternatively, you can use the formatters directly
+        System.out.println("\nFormatted Permanent Employee Data (JSON Format):");
+        System.out.println(new JSONFormatter().format(permanentEmployee));
+
+        System.out.println("\nFormatted Contract Employee Data (Text Format):");
+        System.out.println(new TextFormatter().format(contractEmployee));
+    }
 
 }

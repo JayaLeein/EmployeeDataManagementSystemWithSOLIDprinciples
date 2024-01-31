@@ -5,11 +5,10 @@
 package com.algonquin.cst8288.assignment1.emoloyee;
 
 /**
- *
+ * PermanentEmployeeService interface for calculating bonus and pension contribution
  * @author jayalee
  */
-public class TextFormatter {
-    
-    
-    
+public interface PermanentEmployeeService  {
+    	public double pensionContribution(Employee employee);
+	public double calculateBonus(Employee employee);
 }
