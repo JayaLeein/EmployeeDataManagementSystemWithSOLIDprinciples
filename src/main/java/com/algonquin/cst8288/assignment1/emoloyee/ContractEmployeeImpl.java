@@ -7,8 +7,8 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 import java.util.Date;
 
 /**
- *
- * @author jayalee
+ * ContractEmployeeImpl for implementing contract employee's information
+ * @author JingYi Li
  */
 public class ContractEmployeeImpl extends Employee implements EmployeeService {
     

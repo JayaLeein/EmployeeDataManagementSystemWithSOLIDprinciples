@@ -8,8 +8,8 @@ import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 import java.io.IOException;
 
 /**
- *
- * @author jayalee
+ * An implementation for formatting the data in text format
+ * @author JingYi Li
  */
 
 public class TextFormatter implements Formatter {

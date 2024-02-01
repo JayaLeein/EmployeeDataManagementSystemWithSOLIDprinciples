@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * Implementation of PersistenceService for saving employee data.
- * @author jayalee
+ * @author JingYi Li
  */
 public class EmployeePersistenceService implements PersistenceService {
     

@@ -8,9 +8,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 /**
- * 
- * An implementation for formatting the data in JSON format.
- * 
+ * An implementation for formatting the data in JSON format
+ * @author JingYi Li
  */
 
 public class JSONFormatter implements Formatter{

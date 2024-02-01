@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
+ * EmployeeValidator class responsible for validation.
  * @author jayalee
  */
 public class EmployeeValidator {

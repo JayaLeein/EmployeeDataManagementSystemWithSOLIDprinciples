@@ -8,9 +8,8 @@ import com.algonquin.cst8288.assignment1.persistence.TextFormatter;
 import java.io.IOException;
 
 /**
- * 
  * Main class to execute the application
- * 
+ * @author JingYi Li
  */
 
 public class Main {
@@ -19,14 +18,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // Instantiate two Employee objects
         PermanentEmployeeImpl permanentEmployee = new PermanentEmployeeImpl();
-        permanentEmployee.setName("John Doe");
+        permanentEmployee.setName("JohnDoe");
         permanentEmployee.setEmail("john.doe@example.com");
         permanentEmployee.setAddress("123 Main St");
         permanentEmployee.setSalary(60000.0);
         permanentEmployee.setNumberOfServiceYear(5);
 
         ContractEmployeeImpl contractEmployee = new ContractEmployeeImpl();
-        contractEmployee.setName("Jane Smith");
+        contractEmployee.setName("JaneSmith");
         contractEmployee.setEmail("jane.smith@example.com");
         contractEmployee.setAddress("456 Oak St");
         contractEmployee.setSalary(50000.0);

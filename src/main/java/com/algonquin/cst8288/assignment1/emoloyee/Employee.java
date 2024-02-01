@@ -1,5 +1,9 @@
 package com.algonquin.cst8288.assignment1.emoloyee;
 
+/**
+ * A Plain Old Java Object (POJO) containing attributes related to employees
+ * @author JingYi Li
+ */
 public class Employee {
         
 	private String name;

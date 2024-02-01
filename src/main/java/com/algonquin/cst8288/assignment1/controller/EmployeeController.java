@@ -1,17 +1,14 @@
 package com.algonquin.cst8288.assignment1.controller;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
-import com.algonquin.cst8288.assignment1.persistence.Formatter;
+import com.algonquin.cst8288.assignment1.persistence.JSONFormatter;
+import com.algonquin.cst8288.assignment1.persistence.TextFormatter;
 
 /**
  * 
- * The controller class responsible for processing employee data.
+ * EmployeeController class responsible for processing employee data.
  * Process, validate and save employee data.
  * @author JingYi Li
  * 
@@ -21,7 +18,10 @@ public class EmployeeController {
             
     private final EmployeeValidator employeeValidator;
     private final EmployeeSaver employeeSaver;
-    private Formatter formatter;
+//    private Formatter formatter;
+    JSONFormatter jsonFormatter = new JSONFormatter();
+    TextFormatter textFormatter = new TextFormatter();
+   
 
     public EmployeeController(EmployeeValidator employeeValidator, EmployeeSaver employeeSaver) {
         this.employeeValidator = employeeValidator;
@@ -33,7 +33,8 @@ public class EmployeeController {
             return "FAILED";
         }
         
-        this.employeeSaver.saveEmployee(employee, "employee_data.txt", formatter);
+        this.employeeSaver.saveEmployee(employee, "json_employee_data.txt", jsonFormatter);
+        this.employeeSaver.saveEmployee(employee, "text_employee_data.txt", textFormatter);
         
         return "SUCCESS";
     }

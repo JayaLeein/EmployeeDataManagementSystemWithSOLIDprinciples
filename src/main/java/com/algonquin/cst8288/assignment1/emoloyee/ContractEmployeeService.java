@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  * ContractEmployeeService interface for the renewal date
- * @author jayalee
+ * @author JingYi Li
  */
 public interface ContractEmployeeService {
         Date renewalDate();

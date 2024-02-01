@@ -7,8 +7,8 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 import com.algonquin.cst8288.assignment1.controller.Rate;
 
 /**
- *
- * @author jayalee
+ * ContractEmployeeImpl for implementing permanent employee's information
+ * @author JingYi Lio
  */
 public class PermanentEmployeeImpl extends Employee implements EmployeeService, PermanentEmployeeService {
     

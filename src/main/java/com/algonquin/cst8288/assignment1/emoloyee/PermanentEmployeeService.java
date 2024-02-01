@@ -6,7 +6,7 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 
 /**
  * PermanentEmployeeService interface for calculating bonus and pension contribution
- * @author jayalee
+ * @author JingYi Li
  */
 public interface PermanentEmployeeService  {
     	public double pensionContribution(Employee employee);

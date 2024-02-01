@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * For saving data to write data into file but it violates DIP
+ * EmployeeSaver class for saving data
  * @author jayalee
  */
 public class EmployeeSaver {
